@@ -1,0 +1,17 @@
+V	221009102822Z		1000	unknown	/C=RU/L=Moscow/O=Savings Bank of the Russian Federation/OU=OOCA/CN=tuz_yvn
+V	221009102947Z		1001	unknown	/C=RU/L=Moscow/O=Yvn/CN=tuz_yvn
+V	221009112212Z		1002	unknown	/C=RU/L=Moscow/O=Yvn/CN=Server
+V	221009112359Z		1003	unknown	/C=RU/L=Moscow/O=Yvn/CN=Client
+V	221009115513Z		1004	unknown	/C=RU/L=Moscow/O=Yvn/CN=localhost
+V	221010122623Z		1005	unknown	/C=RU/L=Moscow/O=Yvn/CN=stubs.df.cluster
+V	230326153757Z		1006	unknown	/C=RU/L=Moscow/O=Yvn/CN=Client
+V	230326154058Z		1007	unknown	/C=RU/L=Moscow/O=Yvn/CN=stubs.df.cluster
+V	230326154743Z		1008	unknown	/C=RU/L=Moscow/O=Yvn/CN=stubs.df.cluster
+V	230326155955Z		1009	unknown	/C=RU/L=Moscow/O=Yvn/CN=localhost
+R	230327105209Z	220317105253Z	100A	unknown	/C=RU/L=Moscow/O=Yvn/CN=stubs.df.cluster
+V	120815090000Z		100B	unknown	/C=RU/L=Moscow/O=Yvn/CN=stubs.df.cluster
+V	240408134832Z		100C	unknown	/C=RU/L=Moscow/O=Yvn/CN=tuz_yvn
+V	240408144047Z		100F	unknown	/C=RU/L=Moscow/O=Yvn/CN=localhost
+V	240408144326Z		1010	unknown	/C=RU/L=Moscow/O=Yvn/CN=stubs.df.cluster
+V	240409071728Z		1011	unknown	/C=RU/L=Moscow/O=Yvn/CN=localhost
+V	240409071907Z		1012	unknown	/C=RU/L=Moscow/O=Yvn/CN=stubs.df.cluster

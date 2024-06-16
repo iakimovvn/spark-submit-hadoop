@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+
+    <property>
+        <name>dfs.nameservices</name>
+        <value>yvnstork</value>
+    </property>
+    <property>
+        <name>dfs.client.failover.proxy.provider.yvnstork</name>
+        <value>org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</value>
+    </property>
+    <property>
+        <name>dfs.ha.namenodes.yvnstork</name>
+        <value>nn1</value>
+    </property>
+    <property>
+        <name>dfs.namenode.rpc-address.yvnstork.nn1</name>
+        <value>hdfs-nn.df.cluster:8020</value>
+    </property>
+    <property>
+        <name>dfs.namenode.http-address.yvnstork.nn1</name>
+        <value>hdfs-nn.df.cluster:50020</value>
+    </property>
+
+
+    <!-- Base DataNode params -->
+    <property>
+        <name>dfs.datanode.name.dir</name>
+        <value>file:///opt/hadoop-3.1.2/data/datanode/name</value>
+        <final>true</final>
+    </property>
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>file:///opt/hadoop-3.1.2/data/datanode/data</value>
+        <final>true</final>
+    </property>
+    <property>
+        <name>dfs.datanode.address</name>
+        <value>hdfs-dn.df.cluster:50010</value>
+        <final>true</final>
+    </property>
+    <property>
+        <name>dfs.datanode.ipc.address</name>
+        <value>hdfs-dn.df.cluster:50020</value>
+        <final>true</final>
+    </property>
+
+    <!-- Kerberos params -->
+    <property>
+        <name>dfs.datanode.keytab.file</name>
+        <value>/opt/hadoop-3.1.2/keytabs/hdfs.keytab</value>
+    </property>
+    <property>
+        <name>dfs.datanode.kerberos.principal</name>
+        <value>hdfs/_HOST@DF.CLUSTER</value>
+    </property>
+    <property>
+        <name>dfs.datanode.kerberos.internal.spnego.principal</name>
+        <value>HTTP/_HOST@DF.CLUSTER</value>
+    </property>
+    <property>
+        <name>dfs.web.authentication.kerberos.keytab</name>
+        <value>/opt/hadoop-3.1.2/keytabs/hdfs.keytab</value>
+    </property>
+    <property>
+        <name>dfs.web.authentication.kerberos.principal</name>
+        <value>HTTP/_HOST@DF.CLUSTER</value>
+    </property>
+
+    <!-- Base params -->
+    <property>
+        <name>dfs.block.size</name>
+        <value>1048576</value>
+        <description>Block size</description>
+    </property>
+    <property>
+        <name>dfs.namenode.fs-limits.min-block-size</name>
+        <value>1048576</value>
+    </property>
+    <property>
+        <name>dfs.permissions</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
+    <property>
+        <name>dfs.client.use.datanode.hostname</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>dfs.block.access.token.enable</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>dfs.data.transfer.protection</name>
+        <value>authentication</value>
+    </property>
+    <property>
+        <name>dfs.namenode.datanode.registration.ip-hostname-check</name>
+        <value>false</value>
+    </property>
+<!--    <property>-->
+<!--        <name>dfs.http.policy</name>-->
+<!--        <value>HTTPS_ONLY</value>-->
+<!--    </property>-->
+    <property>
+        <name>dfs.permissions.superusergroup</name>
+        <value>hdfs</value>
+    </property>
+    <property>
+        <name>ignore.secure.ports.for.testing</name>
+        <value>true</value>
+    </property>
+</configuration>

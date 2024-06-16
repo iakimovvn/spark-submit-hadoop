@@ -1,0 +1,63 @@
+services:
+  hdfs-nn:
+    volumes:
+      - type: bind
+        source: "${DOCKER_ROOT_DIR}/volumes/hadoop/hadoop-3.1.2"
+        target: /tmp/hadoop-3.1.2
+      - type: bind
+        source: "${DOCKER_ROOT_DIR}/volumes/pt/parquet-tools.jar"
+        target: /opt/pt/parquet-tools.jar
+  hdfs-dn:
+    volumes:
+      - type: bind
+        source: "${DOCKER_ROOT_DIR}/volumes/hadoop/hadoop-3.1.2"
+        target: /tmp/hadoop-3.1.2
+      - type: bind
+        source: "${DOCKER_ROOT_DIR}/volumes/pt/parquet-tools.jar"
+        target: /opt/pt/parquet-tools.jar
+  hive-server:
+    volumes:
+      - type: bind
+        source: "${DOCKER_ROOT_DIR}/volumes/hadoop/hadoop-3.1.2"
+        target: /tmp/hadoop-3.1.2
+      - type: bind
+        source: "${DOCKER_ROOT_DIR}/volumes/pt/parquet-tools.jar"
+        target: /opt/pt/parquet-tools.jar
+      - type: bind
+        source: "${DOCKER_ROOT_DIR}/volumes/hive/apache-hive-2.3.7-bin.tar.gz"
+        target: /tmp/apache-hive-2.3.7-bin.tar.gz
+  hive-metastore:
+    volumes:
+      - type: bind
+        source: "${DOCKER_ROOT_DIR}/volumes/hadoop/hadoop-3.1.2"
+        target: /tmp/hadoop-3.1.2
+      - type: bind
+        source: "${DOCKER_ROOT_DIR}/volumes/pt/parquet-tools.jar"
+        target: /opt/pt/parquet-tools.jar
+      - type: bind
+        source: "${DOCKER_ROOT_DIR}/volumes/hive/apache-hive-2.3.7-bin.tar.gz"
+        target: /tmp/apache-hive-2.3.7-bin.tar.gz
+  nodemanager:
+    volumes:
+      - type: bind
+        source: "${DOCKER_ROOT_DIR}/volumes/hadoop/hadoop-3.1.2"
+        target: /tmp/hadoop-3.1.2
+      - type: bind
+        source: "${DOCKER_ROOT_DIR}/volumes/pt/parquet-tools.jar"
+        target: /opt/pt/parquet-tools.jar
+  resourcemanager:
+    volumes:
+      - type: bind
+        source: "${DOCKER_ROOT_DIR}/volumes/hadoop/hadoop-3.1.2"
+        target: /tmp/hadoop-3.1.2
+      - type: bind
+        source: "${DOCKER_ROOT_DIR}/volumes/pt/parquet-tools.jar"
+        target: /opt/pt/parquet-tools.jar
+  historyserver:
+    volumes:
+      - type: bind
+        source: "${DOCKER_ROOT_DIR}/volumes/hadoop/hadoop-3.1.2"
+        target: /tmp/hadoop-3.1.2
+      - type: bind
+        source: "${DOCKER_ROOT_DIR}/volumes/pt/parquet-tools.jar"
+        target: /opt/pt/parquet-tools.jar

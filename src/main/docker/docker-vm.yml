@@ -1,0 +1,56 @@
+version: '3.7'
+services:
+  krb5:
+    image: krb5:0.1
+    build:
+      context: krb5_server
+#      dockerfile: krb5_server/Dockerfile
+  core:
+    image: core:0.1
+    build:
+      context: core
+#      dockerfile: core/Dockerfile
+  hadoop-base:
+    image: hadoop-base:3.1.2
+    build:
+      context: hadoop/base
+#      dockerfile: hadoop/base/Dockerfile
+  hadoop-namenode:
+    image: hadoop-namenode:3.1.2
+    build:
+      context: hadoop/namenode
+#      dockerfile: hadoop/namenode/Dockerfile
+    depends_on:
+      - hadoop-base
+  hadoop-datanode:
+    image: hadoop-datanode:3.1.2
+    build:
+      context: hadoop/datanode
+#      dockerfile: hadoop/datanode/Dockerfile
+    depends_on:
+      - hadoop-base
+  hadoop-hive:
+    image: hadoop-hive:2.3.7
+    build:
+      context: hadoop/hive
+#      dockerfile: hadoop/hive/Dockerfile
+  hadoop-nodemanager:
+    image: hadoop-nodemanager:3.1.2
+    build:
+      context: hadoop/hive
+      dockerfile: nodemanager/Dockerfile
+  hadoop-resourcemanager:
+    image: hadoop-resourcemanager:3.1.2
+    build:
+      context: hadoop/hive
+      dockerfile: resourcemanager/Dockerfile
+  hadoop-historyserver:
+    image: hadoop-historyserver:3.1.2
+    build:
+      context: hadoop/hive
+      dockerfile: historyserver/Dockerfile
+  spark-submit:
+    image: spark-submit:3.1.1
+    build:
+      context: hadoop/spark
+#      dockerfile: spark/Dockerfile

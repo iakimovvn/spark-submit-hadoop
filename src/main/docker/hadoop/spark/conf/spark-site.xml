@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>spark.app.name</name>
+        <value>YAKIMOV Spark Testing App</value>
+    </property>
+    <property>
+        <name>spark.master</name>
+        <value>yarn</value>
+    </property>
+    <property>
+        <name>spark.submit.deployMode</name>
+        <value>client</value>
+    </property>
+    <property>
+        <name>spark.testing.memory</name>
+        <value>471859200</value>
+    </property>
+    <property>
+        <name>spark.yarn.jars</name>
+        <value>/opt/it/lib/*.jar</value>
+    </property>
+    <property>
+        <name>spark.kerberos.access.hadoopFileSystems</name>
+        <value>hdfs://yvnstork:8020/</value>
+    </property>
+    <property>
+        <name>spark.sql.warehouse.dir</name>
+        <value>hdfs://yvnstork/tmp/warehouse</value>
+    </property>
+
+    <property>
+        <name>spark.kerberos.access.hadoopFileSystems</name>
+        <value>hdfs://yvnstork:8020/</value>
+    </property>
+    <property>
+        <name>spark.kerberos.keytab</name>
+        <value>/opt/hadoop-3.1.2/keytabs/spark.keytab</value>
+    </property>
+    <property>
+        <name>spark.kerberos.principal</name>
+        <value>spark/spark-submit.df.cluster@DF.CLUSTER</value>
+    </property>
+
+</configuration>
